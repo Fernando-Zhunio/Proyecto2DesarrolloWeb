@@ -1,6 +1,5 @@
 <?php
 //archivo con constantes a ser utilizadas
-require_once "_Config/config.php";
 
 class Conexion{ // patron de disenio singleton
     private static $conexion = null; //atributo static y private

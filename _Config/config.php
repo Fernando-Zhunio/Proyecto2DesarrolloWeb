@@ -21,7 +21,7 @@ define('LOGIN', '_Vista/login.php');
 // RUTAS PARA BASE DE DATOS
 define("SERVIDORBD", "localhost");
 define("PUERTO", "3306");
-define("NOMBREBD", "proyectofinal");
+define("NOMBREBD", "proyectoWeb");
 define("USUARIO", "root");
 define("PASSWORD", "fernando1991");
 ?>
