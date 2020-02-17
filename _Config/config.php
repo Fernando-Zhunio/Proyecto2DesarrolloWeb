@@ -14,7 +14,7 @@ define('FOOTER', 'view/plantillas/footer.php');
 define('PRINCIPAL', 'view/plantillas/principal.php');
 define('SERVICIOTECNICO', 'view/ServicioTecnico/serviciotecnicoView.php');
 define('INSERTARST', 'view/ServicioTecnico/IngresarEditarView.php');
-define('LOGIN', '_Vista/login.php');
+define('LOGIN', '_Vista/loginVista.php');
 
 
 

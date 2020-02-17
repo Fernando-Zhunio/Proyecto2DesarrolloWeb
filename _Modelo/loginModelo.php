@@ -8,7 +8,7 @@
         }
     
         public function login($data){
-            $sql= "SELECT * FROM usuario where user_name = '".$data['usuario']."' and password = '".$data['password']."' ";
+            $sql= "SELECT * FROM usuarios where correo = '".$data['correo']."' and contraseña = '".$data['password']."' ";
             $sentencia= $this->conexion->query($sql);
             while($fila=$sentencia->fetch(PDO::FETCH_ASSOC))
             {

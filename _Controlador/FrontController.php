@@ -6,8 +6,8 @@ class FrontController {
     }
 
     public function rutear() {
-        $controller = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : 'Login';
-        $action = (isset($_REQUEST['a'])) ? $_REQUEST['a'] : 'home';
+        $controller = (isset($_REQUEST['c'])) ? $_REQUEST['c'] : 'Index';
+        $action = (isset($_REQUEST['a'])) ? $_REQUEST['a'] : 'login';
 
         $controller = strtolower($controller); // strtolower Make a string lowercase
         $controller = ucwords($controller) . "Controller"; //ucwords — Uppercase the first character of each word in a string   

@@ -5,10 +5,12 @@
         }
         //iniciar session
         public function iniciarSession(){
+            echo "start sessiob";
             session_start();
         }
         //Agregar un elemento a la sesion
         public function agregarElemento($campo, $valor){
+            echo "valido session";
             $_SESSION[$campo] = $valor;
         }
         //Retornar un elemento de la session
