@@ -22,14 +22,21 @@ class IndexController {
         if($this->db->login($data)){
             $this->usuarioSession->iniciarSession();
             $this->usuarioSession->agregarElemento('usuario',$data['correo']);
-            header('Location:index.php?c=Inicio&a=home');
+            // header('Location:index.php?c=Inicio&a=home');
+            echo json_encode(array("status"=> "OK"));
         }
         else{
             // echo $this->db->login($data);
             // header('Location:index.php?c=Inicio&a=home');
-           
-             require_once LOGIN;
+            echo json_encode(array("status"=> "FAIL"));
+            // require_once LOGIN;  
         }
     }
+    public function closeSession()
+    {
+        $this->usuarioSession->cerrarSession();
+       header("location: index.php");
+    }
+
 }
 ?>

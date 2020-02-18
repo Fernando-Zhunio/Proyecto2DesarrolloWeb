@@ -5,12 +5,12 @@
         }
         //iniciar session
         public function iniciarSession(){
-            echo "start sessiob";
+            // echo "start sessiob";
             session_start();
         }
         //Agregar un elemento a la sesion
         public function agregarElemento($campo, $valor){
-            echo "valido session";
+            // echo "valido session";
             $_SESSION[$campo] = $valor;
         }
         //Retornar un elemento de la session
@@ -25,9 +25,9 @@
         public function estadoSession(){
             return session_status();
         }
-
         public function cerrarSession(){
-            session_unset();
+            // session_unset();
+            $_SESSION;
             session_destroy();
         }
     }

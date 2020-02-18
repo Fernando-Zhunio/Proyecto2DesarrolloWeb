@@ -31,6 +31,38 @@ var isCorreoValid = false;
 function probar() {
     alert("fer");
 }
+
+
+////  cuando da click en login
+$("#btnIngresar").click(function() {
+    var correo = $("#correo").val();
+    var pass = $("#pass").val();
+    $.ajax({
+        type: "POST",
+        url: "index.php?c=Index&a=home",
+        data: { correo: correo, pass: pass },
+        success: function(response) {
+            // alert(response);
+            var jsonNombre = JSON.parse(response);
+            // alert(jsonNombre.status);
+            if (jsonNombre.status == "OK") {
+                location.href = "index.php?c=Inicio&a=home";
+            } else {
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'Credenciales no validas',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        }
+    });
+});
+
+
+
+
 $("#btnRegistrar").attr("disabled", true);
 $("#usuario").keyup(function() {
     var usuario = $("#usuario").val();

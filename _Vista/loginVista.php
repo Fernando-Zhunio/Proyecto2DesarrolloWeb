@@ -19,19 +19,18 @@ require_once("./_Vista/_Plantillas/head.php");
                 </div>
                 <div class="card-body">
                     <div>
-                        <form method="post" action="index.php?c=Index&a=home">
+                        <!-- <form method="post" action="index.php?c=Index&a=home"> -->
                             <div class="form-group">
                                 <label for="email">Usuario o Correo</label>
-                                <input name="correo" type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                                <input name="correo" type="email" class="form-control" id="correo" aria-describedby="emailHelp">
                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                                 <label for="clave">Contraseña</label>
-                                <input name="pass" type="password" class="form-control" id="clave">
+                                <input name="pass" type="password" class="form-control" id="pass">
                             </div>
                             <!-- <input type="submit" onclick="probar()" class="btn" value="Ingresar"> -->
                             <button id="btnIngresar" type="submit" class="btn btn-primary">Ingresar</button>
-                        </form>
                     </div>
                 </div>
             </div>
